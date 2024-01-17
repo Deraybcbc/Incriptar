@@ -36,7 +36,7 @@ app.post("/encripta", (req, res) => {
 
         fs.writeFileSync(ArchivoGuardar, encriptado, 'utf-8');
 
-        res.json("Mensaje Incriptado");
+        res.json({ Mensaje: "Mensaje Incriptado" });
     } catch (error) {
         console.error('Error al leer o escribir archivos:', error);
         res.status(500).send('Error interno del servidor.');

@@ -36,7 +36,7 @@ app.post("/desenciptar", (req, res) => {
 
         fs.writeFileSync(ArchivoResult, desencriptado, 'utf-8');
 
-        res.json("Desencriptado con exito")
+        res.json({ Mensaje: "Desencriptado con exito" })
 
     } catch (error) {
         console.error('Error al leer o escribir archivos:', error);
